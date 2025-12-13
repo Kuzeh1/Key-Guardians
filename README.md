@@ -38,7 +38,9 @@ Security Focused Development:
 
 Sidebar Includes:
 ● Account Management Page
+
 ● Message Page
+
 ● Logout Button
 Account Management Page:-The user can view their username, email, and User ID. They can also change their email and passwords.
 Message Page:-The user can add a friend by inputting a username and clicking send
