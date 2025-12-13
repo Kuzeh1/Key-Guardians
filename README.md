@@ -45,7 +45,8 @@ Sidebar Includes:
 ● Message Page
 
 ● Logout Button
-Account Management Page:-The user can view their username, email, and User ID. They can also change their email and passwords.
+Account Management Page:
+The user can view their username, email, and User ID. They can also change their email and passwords.
 Message Page:-The user can add a friend by inputting a username and clicking send
 
 <img width="412" height="319" alt="Message" src="https://github.com/user-attachments/assets/7dd31cf2-db0c-4f4a-8255-2ab37c7cdb2d" />
