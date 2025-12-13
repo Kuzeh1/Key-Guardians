@@ -37,6 +37,7 @@ Security Focused Development:
 <img width="514" height="372" alt="Message Page" src="https://github.com/user-attachments/assets/b716c5c9-c36d-4ba5-9f59-3b831e4263a0" />
 
 Sidebar Includes:
+
 ● Account Management Page
 
 ● Message Page
