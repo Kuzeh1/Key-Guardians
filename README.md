@@ -31,7 +31,9 @@ Security Focused Development:
 <img width="508" height="338" alt="Registration" src="https://github.com/user-attachments/assets/6ab25afd-22e6-4a46-aa00-d28e3f492b2a" />
 
 ● To use the website, you will need an account
+
 ● If you have an account, enter the email/username and password
+
 ● If you do not have an account, you can create one using the “click here” link.
 
 <img width="514" height="372" alt="Message Page" src="https://github.com/user-attachments/assets/b716c5c9-c36d-4ba5-9f59-3b831e4263a0" />
@@ -67,8 +69,8 @@ Select a friend from the friends list and type your message to send it.-Encrypte
 <img width="771" height="117" alt="Included Secure Flag" src="https://github.com/user-attachments/assets/93d4498b-0926-495d-a8e1-d4a529771f4d" />
 
 SECURITY RISKS - Fix It
-After reviewing the security risk findings, we made two 
-changes:
+After reviewing the security risk findings, we made two changes:
+
 ● We closed the open MongoDB port - We removed the port line in docker-compose.yml, so the database no longer exposes 27017 to potential attackers. This blocks unauthenticated connections.
 
 ● Secured cookie authentication - We updated the set_cookie call in app.py to include a secure flag. This ensures that cookies are transmitted only over https and reduces the risk of token leakage.
