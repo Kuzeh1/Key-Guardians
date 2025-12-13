@@ -49,11 +49,16 @@ Select a friend from the friends list and type your message to send it.-Encrypte
 
 <img width="269" height="109" alt="Exposed Port" src="https://github.com/user-attachments/assets/7c93c91d-42b6-4e93-8a43-1ae7a42daa97" />
 
+
+<img width="701" height="119" alt="CodeQI " src="https://github.com/user-attachments/assets/821b5167-0744-405a-b1ea-c2c9459edaf9" />
+
 ● The authentication cookies did not “Secure” attributes to “true”. Setting them to “true” would ensure that they were only passed through https connections.
+
 ● The database port “27017:27107” was left exposed. This allows unauthenticated remote access to sensitive data unless properly restricted.
 
 
 <img width="270" height="249" alt="Port Removal" src="https://github.com/user-attachments/assets/d104a991-8eac-47fb-bf42-8b32fad459e8" />
+
 
 
 <img width="771" height="117" alt="Included Secure Flag" src="https://github.com/user-attachments/assets/93d4498b-0926-495d-a8e1-d4a529771f4d" />
@@ -62,10 +67,11 @@ SECURITY RISKS - Fix It
 After reviewing the security risk findings, we made two 
 changes:
 ● We closed the open MongoDB port - We removed the port line in docker-compose.yml, so the database no longer exposes 27017 to potential attackers. This blocks unauthenticated connections.
+
 ● Secured cookie authentication - We updated the set_cookie call in app.py to include a secure flag. This ensures that cookies are transmitted only over https and reduces the risk of token leakage.
 
 
-##Lessons Learned-
+## Lessons Learned-
 This project taught us several crucial lessons about security. First, security must be considered at every layer of the application stack. Our focus on secure message transmission didn't prevent us from making configuration errors at the deployment level.-We learned the value of independent security testing. Having another team review our application uncovered vulnerabilities we had overlooked, highlighting the importance of fresh perspectives in security auditing.
 
 
