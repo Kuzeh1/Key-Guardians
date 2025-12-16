@@ -3,28 +3,35 @@
 
 
 
-Team Name: KeyGuardians
-
+KeyGuardians – Secure Messaging Prototype 
 Team Members: Kevin Pasato, Jonathan Tyner, Matthew Chu, Kevin Wong, Alae Laaziri, Naser Shabbir
+Project Name: SecureDove
+Project Type: Internal security-focused prototype
 
-Project Topic: SecureDove
+Project Overview
 
-- Develop an instant messenger that provides secure messaging
-with explicit confidentiality and integrity defenses
+I contributed to the development of SecureDove, an internal secure messaging prototype. The project was designed to test and validate authentication, encryption, and abuse-prevention strategies in a controlled environment before applying them to production systems. My role focused on implementing and hardening security controls, performing security testing, and documenting risks and mitigations.
+
+Functional Features
+
+1. User Account Management: Registration, login, password management, and session handling.
+
+2. Messaging: Secure sending and receiving of messages with encryption and integrity verification.
+
+3. File Sharing: Secure file storage with AES-256 encryption.
+
+4. Message History and Backup: Encrypted storage and retrieval of message history.
 
 
-Functional Requirements:
-1. User Account Management
-2. Message Sending and Receiving
-4. File Sharing
-6. Message History and Backup
-8. Session Management
+Security-Focused Implementation
 
+1. User Authentication and Key Management: Secure login, password hashing with bcrypt, and key handling for message encryption.
 
-Security Focused Development:
-1. User Authentication and Key Management
-3. Integrity via Message Authentication
-10. Denial of Service (DoS) Attack Prevention
+2. Message Integrity: HMAC-SHA256 ensures messages cannot be tampered with in transit.
+
+3. Denial of Service (DoS) Prevention: Rate limiting and account lockout mechanisms to mitigate brute-force attacks.
+
+4. Secure Deployment: Closed exposed MongoDB ports, enforced HTTPS-only secure cookies.
 
 
 
@@ -69,17 +76,30 @@ Select a friend from the friends list and type your message to send it.-Encrypte
 
 <img width="771" height="117" alt="Included Secure Flag" src="https://github.com/user-attachments/assets/93d4498b-0926-495d-a8e1-d4a529771f4d" />
 
-SECURITY RISKS - Fix It
-After reviewing the security risk findings, we made two changes:
 
-● We closed the open MongoDB port - We removed the port line in docker-compose.yml, so the database no longer exposes 27017 to potential attackers. This blocks unauthenticated connections.
+Technical Highlights
 
-● Secured cookie authentication - We updated the set_cookie call in app.py to include a secure flag. This ensures that cookies are transmitted only over https and reduces the risk of token leakage.
+Built with Python, Flask, MongoDB, and Docker.
+
+Implemented encrypted messaging, secure authentication, and abuse prevention mechanisms.
+
+Conducted security testing and hardening, fixing misconfigurations like exposed database ports and insecure cookie flags.
+
+Collaborated with team members to review code, test vulnerabilities, and refine security patterns.
 
 
-## Lessons Learned-
-This project taught us several crucial lessons about security. First, security must be considered at every layer of the application stack. Our focus on secure message transmission didn't prevent us from making configuration errors at the deployment level.-We learned the value of independent security testing. Having another team review our application uncovered vulnerabilities we had overlooked, highlighting the importance of fresh perspectives in security auditing.
+Security Outcomes
 
+1. Closed exposed database ports to block unauthenticated access.
+
+2. Enabled secure cookie flags to prevent token leakage over insecure connections.
+
+3. Implemented rate-limiting to prevent brute-force login attempts.
+
+4. Verified message encryption and integrity across sessions.
+
+## Impact-
+This project gave the team actionable insights into secure authentication, message integrity, and deployment best practices. The prototype provided a safe environment to test security strategies before applying them to production applications, ensuring that lessons learned could be incorporated into future company systems.
 
 
 
