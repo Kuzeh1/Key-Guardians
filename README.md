@@ -4,7 +4,9 @@
 
 
 KeyGuardians – Secure Messaging Prototype 
+
 Team Members: Kevin Pasato, Jonathan Tyner, Matthew Chu, Kevin Wong, Alae Laaziri, Naser Shabbir
+
 Project Name: SecureDove
 Project Type: Internal security-focused prototype
 
